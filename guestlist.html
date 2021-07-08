@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Guestlist</title>
+  </head>
+  <body>
+  <h1>Guestlist</h1>
+  <div class="admitted">
+  </div>
+  <div class="refused">
+  </div>
+    <script type="text/javascript">
+      const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+      const admitted = document.querySelector('.admitted');
+      const refused = document.querySelector('.refused');
+      admitted.textContent = 'Admit: ';
+      refused.textContent = 'Refuse: '
+
+      for (i = 0; i < people.length; i++) {
+        if (people[i] == 'Phil' || people[i] == 'Lola') {
+          refused.textContent += `${people[i]}, `;
+        } else admitted.textContent += `${people[i]}, `;
+      }
+      admitted.textContent = admitted.textContent.slice(0, -2) + '.';
+      refused.textContent = refused.textContent.slice(0, -2) + '.';
+
+
+    </script>
+  </body>
+</html>
